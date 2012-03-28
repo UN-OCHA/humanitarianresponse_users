@@ -1,5 +1,6 @@
 name = "HumanitarianResponse Users"
 description = "HumanitarianResponse - Users"
+core = "7.x"
 package = "Humanitarianresponse"
 php = "5.2.4"
 dependencies[] = "features"
