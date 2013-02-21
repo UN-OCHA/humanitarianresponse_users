@@ -14,8 +14,8 @@ function humanitarianresponse_users_user_default_permissions() {
   $permissions['administer follow'] = array(
     'name' => 'administer follow',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'manager',
+      'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'follow',
   );
@@ -24,8 +24,8 @@ function humanitarianresponse_users_user_default_permissions() {
   $permissions['assign roles'] = array(
     'name' => 'assign roles',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'manager',
+      'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'roleassign',
   );
@@ -34,8 +34,8 @@ function humanitarianresponse_users_user_default_permissions() {
   $permissions['change follow link titles'] = array(
     'name' => 'change follow link titles',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'manager',
+      'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'follow',
   );
@@ -44,8 +44,8 @@ function humanitarianresponse_users_user_default_permissions() {
   $permissions['edit site follow links'] = array(
     'name' => 'edit site follow links',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'manager',
+      'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'follow',
   );
