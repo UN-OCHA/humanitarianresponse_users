@@ -13,6 +13,13 @@ function humanitarianresponse_users_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'persona_block_switch_account';
+  $strongarm->value = FALSE;
+  $export['persona_block_switch_account'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'persona_button_style';
   $strongarm->value = '';
   $export['persona_button_style'] = $strongarm;
