@@ -13,7 +13,7 @@ function humanitarianresponse_users_user_default_roles() {
   // Exported role: trusted.
   $roles['trusted'] = array(
     'name' => 'trusted',
-    'weight' => '2',
+    'weight' => 2,
     'machine_name' => 'trusted',
   );
 
