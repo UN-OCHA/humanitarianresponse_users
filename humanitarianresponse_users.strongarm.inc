@@ -34,9 +34,9 @@ function humanitarianresponse_users_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'persona_takeover_login';
+  $strongarm->name = 'persona_takeover';
   $strongarm->value = 1;
-  $export['persona_takeover_login'] = $strongarm;
+  $export['persona_takeover'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
