@@ -13,10 +13,10 @@ function humanitarianresponse_users_feeds_importer_default() {
   $feeds_importer = new stdClass();
   $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
   $feeds_importer->api_version = 1;
-  $feeds_importer->id = 'contacts_users_import';
+  $feeds_importer->id = 'csv_users';
   $feeds_importer->config = array(
-    'name' => 'Contacts/users import',
-    'description' => 'Import users/contacts from a CSV file',
+    'name' => 'CSV Users',
+    'description' => 'Import users from a CSV file',
     'fetcher' => array(
       'plugin_key' => 'FeedsFileFetcher',
       'config' => array(
@@ -128,7 +128,7 @@ function humanitarianresponse_users_feeds_importer_default() {
     'import_on_create' => 1,
     'process_in_background' => FALSE,
   );
-  $export['contacts_users_import'] = $feeds_importer;
+  $export['csv_users'] = $feeds_importer;
 
   return $export;
 }
