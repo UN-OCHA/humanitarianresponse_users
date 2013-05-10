@@ -228,6 +228,47 @@ function humanitarianresponse_users_field_default_field_instances() {
       'weight' => 20,
     ),
   );
+  
+  // Exported field_instance: 'user-user-field_job_title'
+  $field_instances['user-user-field_job_title'] = array(
+    'bundle' => 'user',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 3,
+      ),
+      'ical' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'user',
+    'field_name' => 'field_job_title',
+    'label' => 'Job Title',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'taxonomy',
+      'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'taxonomy_autocomplete',
+      'weight' => 10,
+    ),
+  );
 
   // Exported field_instance: 'user-user-field_last_name'
   $field_instances['user-user-field_last_name'] = array(
@@ -769,6 +810,7 @@ function humanitarianresponse_users_field_default_field_instances() {
   t('Emergencies');
   t('First name');
   t('Funding');
+  t('Job Title'),
   t('Last name');
   t('Location');
   t('Organization');

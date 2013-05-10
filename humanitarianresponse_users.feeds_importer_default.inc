@@ -109,6 +109,11 @@ function humanitarianresponse_users_feeds_importer_default() {
             'target' => 'field_emergencies',
             'unique' => FALSE,
           ),
+          12 => array(
+            'source' => 'Job Title',
+            'target' => 'field_job_title',
+            'unique' => FALSE,
+          ),
         ),
         'defuse_mail' => 0,
         'input_format' => 'plain_text',
