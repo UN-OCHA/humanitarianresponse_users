@@ -22,6 +22,11 @@ function humanitarianresponse_users_feeds_importer_default() {
       'config' => array(
         'direct' => FALSE,
         'allowed_extensions' => 'txt csv tsv xml opml',
+        'directory' => 'private://feeds',
+        'allowed_schemes' => array(
+          0 => 'public',
+          1 => 'private',
+        ),
       ),
     ),
     'parser' => array(
@@ -44,34 +49,35 @@ function humanitarianresponse_users_feeds_importer_default() {
         'status' => '1',
         'mappings' => array(
           0 => array(
-            'source' => 'First Name',
-            'target' => 'field_user_first_name',
-            'unique' => FALSE,
-          ),
-          1 => array(
-            'source' => 'Last Name',
-            'target' => 'field_user_last_name',
-            'unique' => FALSE,
-          ),
-          2 => array(
-            'source' => 'Organization',
-            'target' => 'field_organizations',
-            'unique' => FALSE,
-          ),
-          3 => array(
-            'source' => 'Job title',
-            'target' => 'field_job_title',
-            'unique' => FALSE,
-          ),
-          4 => array(
-            'source' => 'Email Address',
+            'source' => 'Email',
             'target' => 'mail',
             'unique' => 1,
           ),
-          5 => array(
-            'source' => 'Location',
-            'target' => 'field_locations',
+          1 => array(
+            'source' => 'Salutation',
+            'target' => 'field_salutation',
             'unique' => FALSE,
+          ),
+          2 => array(
+            'source' => 'First name',
+            'target' => 'field_first_name',
+            'unique' => FALSE,
+          ),
+          3 => array(
+            'source' => 'Last name',
+            'target' => 'field_last_name',
+            'unique' => FALSE,
+          ),
+          4 => array(
+            'source' => 'Telephones',
+            'target' => 'field_phones',
+            'unique' => FALSE,
+          ),
+          5 => array(
+            'source' => 'Organization',
+            'target' => 'field_organizations',
+            'term_search' => '0',
+            'autocreate' => 0,
           ),
           6 => array(
             'source' => 'Clusters',
@@ -79,24 +85,35 @@ function humanitarianresponse_users_feeds_importer_default() {
             'unique' => FALSE,
           ),
           7 => array(
-            'source' => 'created',
-            'target' => 'created',
+            'source' => 'Location',
+            'target' => 'field_locations',
             'unique' => FALSE,
           ),
           8 => array(
-            'source' => 'Mobile Phone (Including country code)',
-            'target' => 'field_phone_numbers',
+            'source' => 'Coordination Hub',
+            'target' => 'field_coordination_hubs',
             'unique' => FALSE,
           ),
           9 => array(
-            'source' => 'Email Address',
-            'target' => 'name',
+            'source' => 'Fundings',
+            'target' => 'field_fundings',
+            'unique' => FALSE,
+          ),
+          10 => array(
+            'source' => 'Theme(s)',
+            'target' => 'field_themes',
+            'unique' => FALSE,
+          ),
+          11 => array(
+            'source' => 'Emergencies',
+            'target' => 'field_emergencies',
             'unique' => FALSE,
           ),
         ),
         'defuse_mail' => 0,
         'input_format' => 'plain_text',
         'skip_hash_check' => 0,
+        'bundle' => 'user',
       ),
     ),
     'content_type' => '',
