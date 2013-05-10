@@ -22,7 +22,7 @@ function humanitarianresponse_users_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 5,
+        'weight' => 12,
       ),
       'ical' => array(
         'label' => 'above',
@@ -60,7 +60,7 @@ function humanitarianresponse_users_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 6,
+        'weight' => 14,
       ),
       'ical' => array(
         'label' => 'above',
@@ -98,7 +98,7 @@ function humanitarianresponse_users_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 7,
+        'weight' => 18,
       ),
       'ical' => array(
         'label' => 'above',
@@ -136,7 +136,7 @@ function humanitarianresponse_users_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 2,
       ),
       'ical' => array(
         'label' => 'above',
@@ -203,7 +203,7 @@ function humanitarianresponse_users_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 8,
+        'weight' => 20,
       ),
       'ical' => array(
         'label' => 'above',
@@ -228,7 +228,7 @@ function humanitarianresponse_users_field_default_field_instances() {
       'weight' => 20,
     ),
   );
-  
+
   // Exported field_instance: 'user-user-field_job_title'
   $field_instances['user-user-field_job_title'] = array(
     'bundle' => 'user',
@@ -241,7 +241,7 @@ function humanitarianresponse_users_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 3,
+        'weight' => 10,
       ),
       'ical' => array(
         'label' => 'above',
@@ -282,7 +282,7 @@ function humanitarianresponse_users_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 4,
       ),
       'ical' => array(
         'label' => 'above',
@@ -349,7 +349,7 @@ function humanitarianresponse_users_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 9,
+        'weight' => 16,
       ),
       'ical' => array(
         'label' => 'above',
@@ -387,7 +387,7 @@ function humanitarianresponse_users_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 3,
+        'weight' => 8,
       ),
       'ical' => array(
         'label' => 'above',
@@ -427,19 +427,20 @@ function humanitarianresponse_users_field_default_field_instances() {
         'label' => 'above',
         'module' => 'phone',
         'settings' => array(
-          'allow_alpha' => FALSE,
-          'as_tel_link' => FALSE,
+          'allow_alpha' => 0,
+          'as_tel_link' => 0,
           'components' => array(
+            'country' => 0,
             'extension' => 'extension',
             'numbertype' => 'numbertype',
           ),
           'country_name_position' => 'after',
           'extension_prefix' => ' ext. ',
-          'full_hcard' => FALSE,
+          'full_hcard' => 1,
           'numbertype_position' => 'before',
         ),
         'type' => 'phone_international',
-        'weight' => 2,
+        'weight' => 6,
       ),
       'ical' => array(
         'label' => 'above',
@@ -739,7 +740,7 @@ function humanitarianresponse_users_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 4,
+        'weight' => 0,
       ),
       'ical' => array(
         'label' => 'above',
@@ -777,7 +778,7 @@ function humanitarianresponse_users_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 10,
+        'weight' => 22,
       ),
       'ical' => array(
         'label' => 'above',

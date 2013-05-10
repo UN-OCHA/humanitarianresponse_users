@@ -114,6 +114,11 @@ function humanitarianresponse_users_feeds_importer_default() {
             'target' => 'field_job_title',
             'unique' => FALSE,
           ),
+          13 => array(
+            'source' => 'Email',
+            'target' => 'name',
+            'unique' => FALSE,
+          ),
         ),
         'defuse_mail' => 0,
         'input_format' => 'plain_text',
