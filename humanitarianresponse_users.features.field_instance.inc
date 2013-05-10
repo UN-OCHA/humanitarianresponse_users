@@ -810,7 +810,7 @@ function humanitarianresponse_users_field_default_field_instances() {
   t('Emergencies');
   t('First name');
   t('Funding');
-  t('Job Title'),
+  t('Job Title');
   t('Last name');
   t('Location');
   t('Organization');
