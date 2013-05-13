@@ -44,7 +44,7 @@ function humanitarianresponse_users_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 12,
+      'weight' => 14,
     ),
   );
 
@@ -82,7 +82,7 @@ function humanitarianresponse_users_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 14,
+      'weight' => 16,
     ),
   );
 
@@ -120,7 +120,7 @@ function humanitarianresponse_users_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 18,
+      'weight' => 20,
     ),
   );
 
@@ -187,7 +187,7 @@ function humanitarianresponse_users_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 2,
+      'weight' => 4,
     ),
   );
 
@@ -225,7 +225,7 @@ function humanitarianresponse_users_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 20,
+      'weight' => 22,
     ),
   );
 
@@ -266,7 +266,7 @@ function humanitarianresponse_users_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 10,
+      'weight' => 12,
     ),
   );
 
@@ -333,7 +333,7 @@ function humanitarianresponse_users_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 4,
+      'weight' => 6,
     ),
   );
 
@@ -371,7 +371,7 @@ function humanitarianresponse_users_field_default_field_instances() {
       'module' => 'hs_taxonomy',
       'settings' => array(),
       'type' => 'taxonomy_hs',
-      'weight' => 16,
+      'weight' => 18,
     ),
   );
 
@@ -412,7 +412,7 @@ function humanitarianresponse_users_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 8,
+      'weight' => 10,
     ),
   );
 
@@ -724,7 +724,7 @@ function humanitarianresponse_users_field_default_field_instances() {
         'use_tel_input' => 1,
       ),
       'type' => 'phone',
-      'weight' => 6,
+      'weight' => 8,
     ),
   );
 
@@ -762,7 +762,7 @@ function humanitarianresponse_users_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 0,
+      'weight' => 2,
     ),
   );
 
@@ -800,7 +800,7 @@ function humanitarianresponse_users_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 22,
+      'weight' => 24,
     ),
   );
 
