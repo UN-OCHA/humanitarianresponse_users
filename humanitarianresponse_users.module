@@ -24,7 +24,15 @@ function humanitarianresponse_users_block_view($delta = '') {
   if ($delta == 'user') {
     $block['content'] = '';
     if ($user->uid != 0) {
-      $block['content'] = '<span class="loggedin">'.t('Welcome').', '.l(format_username($user), 'user').'. </span><span class="logout">'.l(t('Logout'), 'user/logout').'</span>';
+      $block['content'] = '<span class="loggedin">'.t('Welcome').', '.l(format_username($user), 'user').'. </span>';
+      if (!module_exists('hr_login')) {
+        $block['content'] .= '<span class="logout">'.l(t('Logout'), 'user/logout').'</span>';
+      }
+    }
+    else {
+      if (!module_exists('hr_login')) {
+        $block['content'] = '<span class="login">'.l(t('Login'), 'user/login').'</span>';
+      }
     }
   }
   return $block;
