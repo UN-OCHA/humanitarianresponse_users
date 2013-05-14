@@ -4,3 +4,28 @@
  */
 
 include_once('humanitarianresponse_users.features.inc');
+
+/**
+ * Implements hook_block_info()
+ */
+function humanitarianresponse_users_block_info() {
+  $blocks['user'] = array(
+    'info' => t('Humanitarianresponse Profile'),
+    'cache' => DRUPAL_CACHE_PER_PAGE
+  );
+  return $blocks;
+}
+
+/**
+ * Implement hook_block_view()
+ */
+function humanitarianresponse_users_block_view($delta = '') {
+  global $user;
+  if ($delta == 'user') {
+    $block['content'] = '';
+    if ($user->uid != 0) {
+      $block['content'] = '<span class="loggedin">'.t('Welcome').', '.l(format_username($user), 'user').'. </span><span class="logout">'.l(t('Logout'), 'user/logout').'</span>';
+    }
+  }
+  return $block;
+}
