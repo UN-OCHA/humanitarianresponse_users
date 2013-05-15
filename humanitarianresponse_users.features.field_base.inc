@@ -110,7 +110,7 @@ function humanitarianresponse_users_field_default_field_bases() {
     'translatable' => 0,
     'type' => 'phone',
   );
-  
+
   // Exported field_base: 'field_salutation'
   $field_bases['field_salutation'] = array(
     'active' => 1,
