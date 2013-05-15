@@ -15,7 +15,6 @@ dependencies[] = hr_job_title
 dependencies[] = hr_mapping_styles
 dependencies[] = hs_taxonomy
 dependencies[] = humanitarianresponse_clusters
-dependencies[] = humanitarianresponse_contacts
 dependencies[] = humanitarianresponse_coordination
 dependencies[] = humanitarianresponse_core
 dependencies[] = humanitarianresponse_emergencies
