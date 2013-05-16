@@ -76,41 +76,6 @@ function humanitarianresponse_users_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_phones'
-  $field_bases['field_phones'] = array(
-    'active' => 1,
-    'cardinality' => -1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_phones',
-    'field_permissions' => array(
-      'type' => 0,
-    ),
-    'foreign keys' => array(),
-    'indexes' => array(
-      'countrycode' => array(
-        0 => 'countrycode',
-      ),
-      'numbertype' => array(
-        0 => 'numbertype',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'phone',
-    'settings' => array(
-      'enable_numbertype' => 1,
-      'entity_translation_sync' => FALSE,
-      'numbertype_allowed_values' => array(
-        'cell' => 'cell',
-        'fax' => 'fax',
-        'home' => 'home',
-        'work' => 'work',
-      ),
-    ),
-    'translatable' => 0,
-    'type' => 'phone',
-  );
-
   // Exported field_base: 'field_salutation'
   $field_bases['field_salutation'] = array(
     'active' => 1,
