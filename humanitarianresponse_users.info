@@ -52,6 +52,7 @@ features[field_base][] = field_first_name
 features[field_base][] = field_last_name
 features[field_base][] = field_phones
 features[field_base][] = field_salutation
+features[field_base][] = field_users
 features[field_instance][] = user-user-field_clusters
 features[field_instance][] = user-user-field_coordination_hubs
 features[field_instance][] = user-user-field_emergencies
