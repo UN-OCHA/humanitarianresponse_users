@@ -141,7 +141,7 @@ function humanitarianresponse_users_field_default_field_bases() {
     'translatable' => 0,
     'type' => 'list_text',
   );
-  
+
   // Exported field_base: 'field_users'
   $field_bases['field_users'] = array(
     'active' => 1,
@@ -153,11 +153,11 @@ function humanitarianresponse_users_field_default_field_bases() {
       'type' => 0,
     ),
     'foreign keys' => array(
-      'node' => array(
+      'users' => array(
         'columns' => array(
-          'target_id' => 'nid',
+          'target_id' => 'uid',
         ),
-        'table' => 'node',
+        'table' => 'users',
       ),
     ),
     'indexes' => array(

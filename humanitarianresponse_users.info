@@ -6,6 +6,7 @@ php = 5.2.4
 project = humanitarianresponse_users
 dependencies[] = context
 dependencies[] = ctools
+dependencies[] = entityreference
 dependencies[] = features
 dependencies[] = feeds
 dependencies[] = feeds_tamper
