@@ -13,6 +13,43 @@ function humanitarianresponse_users_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_user__user';
+  $strongarm->value = array(
+    'view_modes' => array(
+      'search' => array(
+        'custom_settings' => TRUE,
+      ),
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'ical' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
+    'extra_fields' => array(
+      'form' => array(),
+      'display' => array(
+        'summary' => array(
+          'default' => array(
+            'weight' => '5',
+            'visible' => TRUE,
+          ),
+          'search' => array(
+            'weight' => '5',
+            'visible' => TRUE,
+          ),
+        ),
+      ),
+    ),
+  );
+  $export['field_bundle_settings_user__user'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'realname_pattern';
   $strongarm->value = '[user:field_first_name] [user:field_last_name]';
   $export['realname_pattern'] = $strongarm;
