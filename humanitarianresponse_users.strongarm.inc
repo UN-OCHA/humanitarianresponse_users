@@ -30,12 +30,22 @@ function humanitarianresponse_users_strongarm() {
       ),
     ),
     'extra_fields' => array(
-      'form' => array(),
+      'form' => array(
+        'piwik' => array(
+          'weight' => '3',
+        ),
+        'account' => array(
+          'weight' => '-10',
+        ),
+        'timezone' => array(
+          'weight' => '6',
+        ),
+      ),
       'display' => array(
         'summary' => array(
           'default' => array(
             'weight' => '5',
-            'visible' => TRUE,
+            'visible' => FALSE,
           ),
           'search' => array(
             'weight' => '5',

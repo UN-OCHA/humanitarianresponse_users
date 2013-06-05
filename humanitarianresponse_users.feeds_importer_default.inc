@@ -45,7 +45,7 @@ function humanitarianresponse_users_feeds_importer_default() {
           52310416 => 0,
           30037204 => 0,
         ),
-        'update_existing' => 1,
+        'update_existing' => '2',
         'status' => '1',
         'mappings' => array(
           0 => array(
