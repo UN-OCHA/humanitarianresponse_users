@@ -944,6 +944,50 @@ function humanitarianresponse_users_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'user-user-field_user_key'
+  $field_instances['user-user-field_user_key'] = array(
+    'bundle' => 'user',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 30,
+      ),
+      'search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'user',
+    'field_name' => 'field_user_key',
+    'label' => 'Key on these pages',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => 0,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 38,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Clusters');
@@ -952,6 +996,7 @@ function humanitarianresponse_users_field_default_field_instances() {
   t('First name');
   t('Funding');
   t('Job Title');
+  t('Key on these pages');
   t('Last name');
   t('Location');
   t('Organization');
