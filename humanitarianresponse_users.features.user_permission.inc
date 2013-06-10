@@ -30,6 +30,16 @@ function humanitarianresponse_users_user_default_permissions() {
     'module' => 'roleassign',
   );
 
+  // Exported permission: cancel account.
+  $permissions['cancel account'] = array(
+    'name' => 'cancel account',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'user',
+  );
+
   // Exported permission: change follow link titles.
   $permissions['change follow link titles'] = array(
     'name' => 'change follow link titles',
