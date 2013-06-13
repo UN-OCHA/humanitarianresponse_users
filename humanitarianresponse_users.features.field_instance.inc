@@ -291,7 +291,7 @@ function humanitarianresponse_users_field_default_field_instances() {
     'entity_type' => 'user',
     'field_name' => 'field_job_title',
     'label' => 'Job Title',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'user_register_form' => 1,
@@ -509,7 +509,7 @@ function humanitarianresponse_users_field_default_field_instances() {
     'entity_type' => 'user',
     'field_name' => 'field_organizations',
     'label' => 'Organization',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'user_register_form' => 1,
@@ -580,7 +580,7 @@ function humanitarianresponse_users_field_default_field_instances() {
     'entity_type' => 'user',
     'field_name' => 'field_phones',
     'label' => 'Telephone(s)',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'country_options' => array(
         'all_country_codes' => 1,
