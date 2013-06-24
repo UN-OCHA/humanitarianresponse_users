@@ -580,7 +580,7 @@ function humanitarianresponse_users_field_default_field_instances() {
     'entity_type' => 'user',
     'field_name' => 'field_phones',
     'label' => 'Telephone(s)',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'country_options' => array(
         'all_country_codes' => 1,
