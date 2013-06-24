@@ -122,7 +122,7 @@ function humanitarianresponse_users_feeds_importer_default() {
         ),
         'defuse_mail' => 0,
         'input_format' => 'plain_text',
-        'skip_hash_check' => 0,
+        'skip_hash_check' => 1,
         'bundle' => 'user',
       ),
     ),
