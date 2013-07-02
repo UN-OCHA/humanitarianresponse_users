@@ -35,10 +35,10 @@ function humanitarianresponse_users_strongarm() {
           'weight' => '3',
         ),
         'account' => array(
-          'weight' => '-10',
+          'weight' => '-50',
         ),
         'timezone' => array(
-          'weight' => '6',
+          'weight' => '2',
         ),
       ),
       'display' => array(
@@ -49,7 +49,7 @@ function humanitarianresponse_users_strongarm() {
           ),
           'search' => array(
             'weight' => '5',
-            'visible' => TRUE,
+            'visible' => FALSE,
           ),
         ),
       ),

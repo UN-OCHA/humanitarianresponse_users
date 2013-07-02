@@ -51,7 +51,7 @@ function humanitarianresponse_users_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 20,
+      'weight' => -36,
     ),
   );
 
@@ -95,7 +95,7 @@ function humanitarianresponse_users_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 22,
+      'weight' => -32,
     ),
   );
 
@@ -139,7 +139,7 @@ function humanitarianresponse_users_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 26,
+      'weight' => -28,
     ),
   );
 
@@ -212,7 +212,7 @@ function humanitarianresponse_users_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 10,
+      'weight' => -46,
     ),
   );
 
@@ -256,7 +256,7 @@ function humanitarianresponse_users_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 28,
+      'weight' => -26,
     ),
   );
 
@@ -304,7 +304,7 @@ function humanitarianresponse_users_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 18,
+      'weight' => -38,
     ),
   );
 
@@ -377,59 +377,7 @@ function humanitarianresponse_users_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 12,
-    ),
-  );
-
-  // Exported field_instance: 'user-user-field_location'
-  $field_instances['user-user-field_location'] = array(
-    'bundle' => 'user',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'geofield',
-        'settings' => array(
-          'data' => 'full',
-          'map_preset' => 'humanitarianresponse_geofield_formatter',
-        ),
-        'type' => 'geofield_openlayers',
-        'weight' => 26,
-      ),
-      'ical' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'search' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 9,
-      ),
-    ),
-    'entity_type' => 'user',
-    'field_name' => 'field_location',
-    'label' => 'Location',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'local_solr' => array(
-        'enabled' => FALSE,
-        'lat_field' => 'lat',
-        'lng_field' => 'lng',
-      ),
-      'user_register_form' => 0,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'geofield',
-      'settings' => array(),
-      'type' => 'geofield_geolocation',
-      'weight' => 32,
+      'weight' => -44,
     ),
   );
 
@@ -438,7 +386,7 @@ function humanitarianresponse_users_field_default_field_instances() {
     'bundle' => 'user',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Select the location you work in and click on the "Add" button',
     'display' => array(
       'default' => array(
         'label' => 'inline',
@@ -463,18 +411,18 @@ function humanitarianresponse_users_field_default_field_instances() {
     ),
     'entity_type' => 'user',
     'field_name' => 'field_locations',
-    'label' => 'Location',
+    'label' => 'Location you work in',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
-      'user_register_form' => 0,
+      'user_register_form' => 1,
     ),
     'widget' => array(
       'active' => 1,
       'module' => 'hs_taxonomy',
       'settings' => array(),
       'type' => 'taxonomy_hs',
-      'weight' => 24,
+      'weight' => -34,
     ),
   );
 
@@ -522,7 +470,7 @@ function humanitarianresponse_users_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 16,
+      'weight' => -40,
     ),
   );
 
@@ -834,7 +782,7 @@ function humanitarianresponse_users_field_default_field_instances() {
         ),
         'default_country' => 'AF',
         'enable_country' => 1,
-        'enable_default_country' => 1,
+        'enable_default_country' => 0,
       ),
       'enable_extension' => 1,
       'entity_translation_sync' => FALSE,
@@ -852,7 +800,7 @@ function humanitarianresponse_users_field_default_field_instances() {
         'use_tel_input' => 1,
       ),
       'type' => 'phone',
-      'weight' => 14,
+      'weight' => -42,
     ),
   );
 
@@ -896,7 +844,7 @@ function humanitarianresponse_users_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 8,
+      'weight' => -48,
     ),
   );
 
@@ -940,7 +888,7 @@ function humanitarianresponse_users_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 30,
+      'weight' => -30,
     ),
   );
 
@@ -984,7 +932,7 @@ function humanitarianresponse_users_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 38,
+      'weight' => 4,
     ),
   );
 
@@ -998,9 +946,10 @@ function humanitarianresponse_users_field_default_field_instances() {
   t('Job Title');
   t('Key on these pages');
   t('Last name');
-  t('Location');
+  t('Location you work in');
   t('Organization');
   t('Salutation');
+  t('Select the location you work in and click on the "Add" button');
   t('Telephone(s)');
   t('Theme(s)');
 

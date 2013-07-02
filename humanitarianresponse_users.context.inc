@@ -26,11 +26,17 @@ function humanitarianresponse_users_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'humanitarianresponse_users-user' => array(
-          'module' => 'humanitarianresponse_users',
-          'delta' => 'user',
+        'logintoboggan-logintoboggan_logged_in' => array(
+          'module' => 'logintoboggan',
+          'delta' => 'logintoboggan_logged_in',
           'region' => 'user_second',
-          'weight' => '0',
+          'weight' => '-10',
+        ),
+        'user-login' => array(
+          'module' => 'user',
+          'delta' => 'login',
+          'region' => 'user_second',
+          'weight' => '-9',
         ),
       ),
     ),
