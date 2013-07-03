@@ -297,7 +297,7 @@ function humanitarianresponse_users_field_default_field_instances() {
       'user_register_form' => 1,
     ),
     'widget' => array(
-      'active' => 0,
+      'active' => 1,
       'module' => 'taxonomy',
       'settings' => array(
         'autocomplete_path' => 'taxonomy/autocomplete',
@@ -386,7 +386,7 @@ function humanitarianresponse_users_field_default_field_instances() {
     'bundle' => 'user',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Select the location you work in and click on the "Add" button',
+    'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'inline',
@@ -419,9 +419,11 @@ function humanitarianresponse_users_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'hs_taxonomy',
-      'settings' => array(),
-      'type' => 'taxonomy_hs',
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => 1,
+      ),
+      'type' => 'options_select',
       'weight' => -34,
     ),
   );
@@ -463,13 +465,12 @@ function humanitarianresponse_users_field_default_field_instances() {
       'user_register_form' => 1,
     ),
     'widget' => array(
-      'active' => 0,
-      'module' => 'taxonomy',
+      'active' => 1,
+      'module' => 'options',
       'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
-        'size' => 60,
+        'apply_chosen' => 1,
       ),
-      'type' => 'taxonomy_autocomplete',
+      'type' => 'options_select',
       'weight' => -40,
     ),
   );
@@ -842,7 +843,9 @@ function humanitarianresponse_users_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(),
+      'settings' => array(
+        'apply_chosen' => 0,
+      ),
       'type' => 'options_select',
       'weight' => -48,
     ),
@@ -886,8 +889,10 @@ function humanitarianresponse_users_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
+      'settings' => array(
+        'apply_chosen' => 1,
+      ),
+      'type' => 'options_select',
       'weight' => -30,
     ),
   );
@@ -949,7 +954,6 @@ function humanitarianresponse_users_field_default_field_instances() {
   t('Location you work in');
   t('Organization');
   t('Salutation');
-  t('Select the location you work in and click on the "Add" button');
   t('Telephone(s)');
   t('Theme(s)');
 
