@@ -84,6 +84,7 @@ features[user_permission][] = view field_user_key
 features[user_role][] = trusted
 features[variable][] = field_bundle_settings_user__user
 features[variable][] = logintoboggan_login_block_type
+features[variable][] = logintoboggan_login_link_separate
 features[variable][] = realname_pattern
 features[variable][] = roleassign_roles
 features[variable][] = user_picture_default
