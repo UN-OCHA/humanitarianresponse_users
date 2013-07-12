@@ -13,6 +13,111 @@ function humanitarianresponse_users_feeds_importer_default() {
   $feeds_importer = new stdClass();
   $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
   $feeds_importer->api_version = 1;
+  $feeds_importer->id = 'csv_user_profiles';
+  $feeds_importer->config = array(
+    'name' => 'CSV User Profiles',
+    'description' => 'Import user profiles from a CSV file',
+    'fetcher' => array(
+      'plugin_key' => 'FeedsFileFetcher',
+      'config' => array(
+        'direct' => FALSE,
+        'allowed_extensions' => 'txt csv tsv xml opml',
+      ),
+    ),
+    'parser' => array(
+      'plugin_key' => 'FeedsCSVParser',
+      'config' => array(
+        'delimiter' => ',',
+        'no_headers' => 0,
+      ),
+    ),
+    'processor' => array(
+      'plugin_key' => 'FeedsEntityProcessorProfile2',
+      'config' => array(
+        'values' => array(
+          'type' => 'main',
+          'label' => '',
+          'user' => '0',
+        ),
+        'mappings' => array(
+          0 => array(
+            'source' => 'Salutation',
+            'target' => 'field_salutation',
+            'unique' => FALSE,
+          ),
+          1 => array(
+            'source' => 'First name',
+            'target' => 'field_first_name',
+            'unique' => FALSE,
+          ),
+          2 => array(
+            'source' => 'Last name',
+            'target' => 'field_last_name',
+            'unique' => FALSE,
+          ),
+          3 => array(
+            'source' => 'Telephones',
+            'target' => 'field_phones',
+            'unique' => FALSE,
+          ),
+          4 => array(
+            'source' => 'Organization',
+            'target' => 'field_organizations',
+            'unique' => FALSE,
+          ),
+          5 => array(
+            'source' => 'Clusters',
+            'target' => 'field_clusters',
+            'unique' => FALSE,
+          ),
+          6 => array(
+            'source' => 'Location',
+            'target' => 'field_locations',
+            'unique' => FALSE,
+          ),
+          7 => array(
+            'source' => 'Coordination Hub',
+            'target' => 'field_coordination_hubs',
+            'unique' => FALSE,
+          ),
+          8 => array(
+            'source' => 'Fundings',
+            'target' => 'field_fundings',
+            'unique' => FALSE,
+          ),
+          9 => array(
+            'source' => 'Theme(s)',
+            'target' => 'field_themes',
+            'unique' => FALSE,
+          ),
+          10 => array(
+            'source' => 'Emergencies',
+            'target' => 'field_emergencies',
+            'unique' => FALSE,
+          ),
+          11 => array(
+            'source' => 'Job Title',
+            'target' => 'field_job_title',
+            'unique' => FALSE,
+          ),
+        ),
+        'update_existing' => '2',
+        'input_format' => 'plain_text',
+        'skip_hash_check' => 0,
+      ),
+    ),
+    'content_type' => '',
+    'update' => 0,
+    'import_period' => '-1',
+    'expire_period' => 3600,
+    'import_on_create' => 1,
+    'process_in_background' => 0,
+  );
+  $export['csv_user_profiles'] = $feeds_importer;
+
+  $feeds_importer = new stdClass();
+  $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
+  $feeds_importer->api_version = 1;
   $feeds_importer->id = 'csv_users';
   $feeds_importer->config = array(
     'name' => 'CSV Users',
