@@ -38,6 +38,7 @@ function humanitarianresponse_users_field_default_field_bases() {
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'max_length' => 255,
+      'profile2_private' => 0,
     ),
     'translatable' => 0,
     'type' => 'text',
@@ -71,6 +72,7 @@ function humanitarianresponse_users_field_default_field_bases() {
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'max_length' => 255,
+      'profile2_private' => 0,
     ),
     'translatable' => 0,
     'type' => 'text',
@@ -106,6 +108,7 @@ function humanitarianresponse_users_field_default_field_bases() {
         'home' => 'home',
         'work' => 'work',
       ),
+      'profile2_private' => 0,
     ),
     'translatable' => 0,
     'type' => 'phone',
@@ -137,6 +140,7 @@ function humanitarianresponse_users_field_default_field_bases() {
       ),
       'allowed_values_function' => '',
       'entity_translation_sync' => FALSE,
+      'profile2_private' => 0,
     ),
     'translatable' => 0,
     'type' => 'list_text',
