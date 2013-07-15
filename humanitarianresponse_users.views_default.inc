@@ -14,7 +14,7 @@ function humanitarianresponse_users_views_default_views() {
   $view->name = 'user_profiles';
   $view->description = '';
   $view->tag = 'default';
-  $view->base_table = 'profiles';
+  $view->base_table = 'profile';
   $view->human_name = 'User profiles';
   $view->core = 7;
   $view->api_version = '3.0';
@@ -39,13 +39,21 @@ function humanitarianresponse_users_views_default_views() {
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
   $handler->display->display_options['empty']['area']['content'] = 'There are no key contacts';
   $handler->display->display_options['empty']['area']['format'] = 'simple';
-  /* Field: User: Name */
-  $handler->display->display_options['fields']['name']['id'] = 'name';
-  $handler->display->display_options['fields']['name']['table'] = 'users';
-  $handler->display->display_options['fields']['name']['field'] = 'name';
-  $handler->display->display_options['fields']['name']['label'] = '';
-  $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+  /* Field: Field: First name */
+  $handler->display->display_options['fields']['field_first_name']['id'] = 'field_first_name';
+  $handler->display->display_options['fields']['field_first_name']['table'] = 'field_data_field_first_name';
+  $handler->display->display_options['fields']['field_first_name']['field'] = 'field_first_name';
+  $handler->display->display_options['fields']['field_first_name']['label'] = '';
+  $handler->display->display_options['fields']['field_first_name']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_first_name']['element_label_colon'] = FALSE;
+  /* Field: Field: Last name */
+  $handler->display->display_options['fields']['field_last_name']['id'] = 'field_last_name';
+  $handler->display->display_options['fields']['field_last_name']['table'] = 'field_data_field_last_name';
+  $handler->display->display_options['fields']['field_last_name']['field'] = 'field_last_name';
+  $handler->display->display_options['fields']['field_last_name']['label'] = '';
+  $handler->display->display_options['fields']['field_last_name']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_last_name']['alter']['text'] = '[field_first_name] [field_last_name]';
+  $handler->display->display_options['fields']['field_last_name']['element_label_colon'] = FALSE;
   /* Field: Field: Job Title */
   $handler->display->display_options['fields']['field_job_title']['id'] = 'field_job_title';
   $handler->display->display_options['fields']['field_job_title']['table'] = 'field_data_field_job_title';
@@ -62,8 +70,8 @@ function humanitarianresponse_users_views_default_views() {
   $handler->display->display_options['fields']['field_phones']['click_sort_column'] = 'numbertype';
   $handler->display->display_options['fields']['field_phones']['settings'] = array(
     'components' => array(
-      'numbertype' => 'numbertype',
       'country' => 0,
+      'numbertype' => 0,
     ),
     'full_hcard' => 0,
     'as_tel_link' => 0,
@@ -72,11 +80,11 @@ function humanitarianresponse_users_views_default_views() {
     'numbertype_position' => 'before',
   );
   $handler->display->display_options['fields']['field_phones']['delta_offset'] = '0';
-  /* Sort criterion: User: Name */
-  $handler->display->display_options['sorts']['name']['id'] = 'name';
-  $handler->display->display_options['sorts']['name']['table'] = 'users';
-  $handler->display->display_options['sorts']['name']['field'] = 'name';
-  /* Contextual filter: User: Key on these pages (field_key) */
+  /* Sort criterion: Field: Last name (field_last_name) */
+  $handler->display->display_options['sorts']['field_last_name_value']['id'] = 'field_last_name_value';
+  $handler->display->display_options['sorts']['field_last_name_value']['table'] = 'field_data_field_last_name';
+  $handler->display->display_options['sorts']['field_last_name_value']['field'] = 'field_last_name_value';
+  /* Contextual filter: Profile: Key on these pages (field_key) */
   $handler->display->display_options['arguments']['field_key_target_id']['id'] = 'field_key_target_id';
   $handler->display->display_options['arguments']['field_key_target_id']['table'] = 'field_data_field_key';
   $handler->display->display_options['arguments']['field_key_target_id']['field'] = 'field_key_target_id';
@@ -85,16 +93,11 @@ function humanitarianresponse_users_views_default_views() {
   $handler->display->display_options['arguments']['field_key_target_id']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_key_target_id']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_key_target_id']['summary_options']['items_per_page'] = '25';
-  /* Filter criterion: User: Active */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'users';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = '1';
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  $handler->display->display_options['arguments']['field_key_target_id']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_key_target_id']['validate']['type'] = 'taxonomy_term';
 
-  /* Display: Key Contacts per term */
-  $handler = $view->new_display('block', 'Key Contacts per term', 'key_per_term');
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'key_per_term');
   $handler->display->display_options['block_description'] = 'Key Contacts per term';
   $translatables['user_profiles'] = array(
     t('Master'),
@@ -106,7 +109,9 @@ function humanitarianresponse_users_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('There are no key contacts'),
+    t('[field_first_name] [field_last_name]'),
     t('All'),
+    t('Block'),
     t('Key Contacts per term'),
   );
   $export['user_profiles'] = $view;
