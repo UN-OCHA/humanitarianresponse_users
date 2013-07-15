@@ -24,8 +24,7 @@ function humanitarianresponse_users_views_default_views() {
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Key Contacts';
   $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['access']['perm'] = 'access user profiles';
+  $handler->display->display_options['access']['type'] = 'none';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
@@ -97,7 +96,7 @@ function humanitarianresponse_users_views_default_views() {
   /* Display: Key Contacts per term */
   $handler = $view->new_display('block', 'Key Contacts per term', 'key_per_term');
   $handler->display->display_options['block_description'] = 'Key Contacts per term';
-  $translatables['users'] = array(
+  $translatables['user_profiles'] = array(
     t('Master'),
     t('Key Contacts'),
     t('more'),
