@@ -11,11 +11,11 @@ function humanitarianresponse_users_views_default_views() {
   $export = array();
 
   $view = new view();
-  $view->name = 'users';
+  $view->name = 'user_profiles';
   $view->description = '';
   $view->tag = 'default';
-  $view->base_table = 'users';
-  $view->human_name = 'Users';
+  $view->base_table = 'profiles';
+  $view->human_name = 'User profiles';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
@@ -77,15 +77,15 @@ function humanitarianresponse_users_views_default_views() {
   $handler->display->display_options['sorts']['name']['id'] = 'name';
   $handler->display->display_options['sorts']['name']['table'] = 'users';
   $handler->display->display_options['sorts']['name']['field'] = 'name';
-  /* Contextual filter: User: Key on these pages (field_user_key) */
-  $handler->display->display_options['arguments']['field_user_key_target_id']['id'] = 'field_user_key_target_id';
-  $handler->display->display_options['arguments']['field_user_key_target_id']['table'] = 'field_data_field_user_key';
-  $handler->display->display_options['arguments']['field_user_key_target_id']['field'] = 'field_user_key_target_id';
-  $handler->display->display_options['arguments']['field_user_key_target_id']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['field_user_key_target_id']['default_argument_type'] = 'taxonomy_tid';
-  $handler->display->display_options['arguments']['field_user_key_target_id']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['field_user_key_target_id']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['field_user_key_target_id']['summary_options']['items_per_page'] = '25';
+  /* Contextual filter: User: Key on these pages (field_key) */
+  $handler->display->display_options['arguments']['field_key_target_id']['id'] = 'field_key_target_id';
+  $handler->display->display_options['arguments']['field_key_target_id']['table'] = 'field_data_field_key';
+  $handler->display->display_options['arguments']['field_key_target_id']['field'] = 'field_key_target_id';
+  $handler->display->display_options['arguments']['field_key_target_id']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_key_target_id']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['field_key_target_id']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_key_target_id']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_key_target_id']['summary_options']['items_per_page'] = '25';
   /* Filter criterion: User: Active */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'users';
@@ -110,7 +110,7 @@ function humanitarianresponse_users_views_default_views() {
     t('All'),
     t('Key Contacts per term'),
   );
-  $export['users'] = $view;
+  $export['user_profiles'] = $view;
 
   return $export;
 }
