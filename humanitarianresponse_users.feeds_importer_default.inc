@@ -22,6 +22,11 @@ function humanitarianresponse_users_feeds_importer_default() {
       'config' => array(
         'direct' => FALSE,
         'allowed_extensions' => 'txt csv tsv xml opml',
+        'directory' => 'private://feeds',
+        'allowed_schemes' => array(
+          0 => 'public',
+          1 => 'private',
+        ),
       ),
     ),
     'parser' => array(
@@ -41,69 +46,80 @@ function humanitarianresponse_users_feeds_importer_default() {
         ),
         'mappings' => array(
           0 => array(
+            'source' => 'Email',
+            'target' => 'field_email',
+            'unique' => FALSE,
+          ),
+          1 => array(
             'source' => 'Salutation',
             'target' => 'field_salutation',
             'unique' => FALSE,
           ),
-          1 => array(
+          2 => array(
             'source' => 'First name',
             'target' => 'field_first_name',
             'unique' => FALSE,
           ),
-          2 => array(
+          3 => array(
             'source' => 'Last name',
             'target' => 'field_last_name',
             'unique' => FALSE,
           ),
-          3 => array(
+          4 => array(
             'source' => 'Telephones',
             'target' => 'field_phones',
             'unique' => FALSE,
           ),
-          4 => array(
+          5 => array(
             'source' => 'Organization',
             'target' => 'field_organizations',
             'unique' => FALSE,
           ),
-          5 => array(
+          6 => array(
             'source' => 'Clusters',
             'target' => 'field_clusters',
             'unique' => FALSE,
           ),
-          6 => array(
+          7 => array(
             'source' => 'Location',
             'target' => 'field_locations',
             'unique' => FALSE,
           ),
-          7 => array(
+          8 => array(
             'source' => 'Coordination Hub',
             'target' => 'field_coordination_hubs',
             'unique' => FALSE,
           ),
-          8 => array(
+          9 => array(
             'source' => 'Fundings',
             'target' => 'field_fundings',
             'unique' => FALSE,
           ),
-          9 => array(
+          10 => array(
             'source' => 'Theme(s)',
             'target' => 'field_themes',
             'unique' => FALSE,
           ),
-          10 => array(
+          11 => array(
             'source' => 'Emergencies',
             'target' => 'field_emergencies',
             'unique' => FALSE,
           ),
-          11 => array(
+          12 => array(
             'source' => 'Job Title',
             'target' => 'field_job_title',
             'unique' => FALSE,
+          ),
+          13 => array(
+            'source' => 'GUID',
+            'target' => 'guid',
+            'unique' => 1,
           ),
         ),
         'update_existing' => '2',
         'input_format' => 'plain_text',
         'skip_hash_check' => 0,
+        'bundle' => NULL,
       ),
     ),
     'content_type' => '',

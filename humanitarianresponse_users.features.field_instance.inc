@@ -40,7 +40,7 @@ function humanitarianresponse_users_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 15,
+      'weight' => 7,
     ),
   );
 
@@ -72,7 +72,41 @@ function humanitarianresponse_users_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 19,
+      'weight' => 9,
+    ),
+  );
+
+  // Exported field_instance: 'profile2-main-field_email'
+  $field_instances['profile2-main-field_email'] = array(
+    'bundle' => 'main',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'email',
+        'settings' => array(),
+        'type' => 'email_default',
+        'weight' => 13,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'field_name' => 'field_email',
+    'label' => 'Email',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'email',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'email_textfield',
+      'weight' => 0,
     ),
   );
 
@@ -104,7 +138,7 @@ function humanitarianresponse_users_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 25,
+      'weight' => 12,
     ),
   );
 
@@ -165,7 +199,7 @@ function humanitarianresponse_users_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 5,
+      'weight' => 2,
     ),
   );
 
@@ -197,7 +231,7 @@ function humanitarianresponse_users_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 23,
+      'weight' => 11,
     ),
   );
 
@@ -232,7 +266,7 @@ function humanitarianresponse_users_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 13,
+      'weight' => 6,
     ),
   );
 
@@ -293,7 +327,7 @@ function humanitarianresponse_users_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 7,
+      'weight' => 3,
     ),
   );
 
@@ -327,7 +361,7 @@ function humanitarianresponse_users_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 17,
+      'weight' => 8,
     ),
   );
 
@@ -361,7 +395,7 @@ function humanitarianresponse_users_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 11,
+      'weight' => 5,
     ),
   );
 
@@ -666,7 +700,7 @@ function humanitarianresponse_users_field_default_field_instances() {
         'use_tel_input' => 1,
       ),
       'type' => 'phone',
-      'weight' => 9,
+      'weight' => 4,
     ),
   );
 
@@ -700,7 +734,7 @@ function humanitarianresponse_users_field_default_field_instances() {
         'apply_chosen' => 0,
       ),
       'type' => 'options_select',
-      'weight' => 3,
+      'weight' => 1,
     ),
   );
 
@@ -734,7 +768,7 @@ function humanitarianresponse_users_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 21,
+      'weight' => 10,
     ),
   );
 
@@ -1675,6 +1709,7 @@ function humanitarianresponse_users_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Clusters');
   t('Coordination Hub');
+  t('Email');
   t('Emergencies');
   t('First name');
   t('Funding');
