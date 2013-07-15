@@ -367,6 +367,49 @@ function humanitarianresponse_users_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'profile2-main-field_key'
+  $field_instances['profile2-main-field_key'] = array(
+    'bundle' => 'main',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 14,
+      ),
+      'search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'field_name' => 'field_key',
+    'label' => 'Key on these pages',
+    'required' => FALSE,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 15,
+    ),
+  );
+
   // Exported field_instance: 'profile2-main-field_last_name'
   $field_instances['profile2-main-field_last_name'] = array(
     'bundle' => 'main',
@@ -981,6 +1024,7 @@ function humanitarianresponse_users_field_default_field_instances() {
   t('First name');
   t('Funding');
   t('Job Title');
+  t('Key on these pages');
   t('Last name');
   t('Location you work in');
   t('Organization');
