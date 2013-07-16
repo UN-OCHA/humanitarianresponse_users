@@ -13,13 +13,13 @@ function humanitarianresponse_users_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'field_bundle_settings_user__user';
+  $strongarm->name = 'field_bundle_settings_profile2__main';
   $strongarm->value = array(
     'view_modes' => array(
       'search' => array(
         'custom_settings' => TRUE,
       ),
-      'full' => array(
+      'account' => array(
         'custom_settings' => FALSE,
       ),
       'ical' => array(
@@ -30,32 +30,11 @@ function humanitarianresponse_users_strongarm() {
       ),
     ),
     'extra_fields' => array(
-      'form' => array(
-        'piwik' => array(
-          'weight' => '3',
-        ),
-        'account' => array(
-          'weight' => '-50',
-        ),
-        'timezone' => array(
-          'weight' => '2',
-        ),
-      ),
-      'display' => array(
-        'summary' => array(
-          'default' => array(
-            'weight' => '5',
-            'visible' => FALSE,
-          ),
-          'search' => array(
-            'weight' => '5',
-            'visible' => FALSE,
-          ),
-        ),
-      ),
+      'form' => array(),
+      'display' => array(),
     ),
   );
-  $export['field_bundle_settings_user__user'] = $strongarm;
+  $export['field_bundle_settings_profile2__main'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
