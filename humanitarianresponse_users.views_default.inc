@@ -39,14 +39,14 @@ function humanitarianresponse_users_views_default_views() {
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
   $handler->display->display_options['empty']['area']['content'] = 'There are no key contacts';
   $handler->display->display_options['empty']['area']['format'] = 'simple';
-  /* Field: Field: First name */
+  /* Field: Profile: First name */
   $handler->display->display_options['fields']['field_first_name']['id'] = 'field_first_name';
   $handler->display->display_options['fields']['field_first_name']['table'] = 'field_data_field_first_name';
   $handler->display->display_options['fields']['field_first_name']['field'] = 'field_first_name';
   $handler->display->display_options['fields']['field_first_name']['label'] = '';
   $handler->display->display_options['fields']['field_first_name']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_first_name']['element_label_colon'] = FALSE;
-  /* Field: Field: Last name */
+  /* Field: Profile: Last name */
   $handler->display->display_options['fields']['field_last_name']['id'] = 'field_last_name';
   $handler->display->display_options['fields']['field_last_name']['table'] = 'field_data_field_last_name';
   $handler->display->display_options['fields']['field_last_name']['field'] = 'field_last_name';
@@ -54,14 +54,14 @@ function humanitarianresponse_users_views_default_views() {
   $handler->display->display_options['fields']['field_last_name']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_last_name']['alter']['text'] = '[field_first_name] [field_last_name]';
   $handler->display->display_options['fields']['field_last_name']['element_label_colon'] = FALSE;
-  /* Field: Field: Job Title */
+  /* Field: Profile: Job Title */
   $handler->display->display_options['fields']['field_job_title']['id'] = 'field_job_title';
   $handler->display->display_options['fields']['field_job_title']['table'] = 'field_data_field_job_title';
   $handler->display->display_options['fields']['field_job_title']['field'] = 'field_job_title';
   $handler->display->display_options['fields']['field_job_title']['label'] = '';
   $handler->display->display_options['fields']['field_job_title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_job_title']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: Field: Telephone(s) */
+  /* Field: Profile: Telephone(s) */
   $handler->display->display_options['fields']['field_phones']['id'] = 'field_phones';
   $handler->display->display_options['fields']['field_phones']['table'] = 'field_data_field_phones';
   $handler->display->display_options['fields']['field_phones']['field'] = 'field_phones';
@@ -80,7 +80,7 @@ function humanitarianresponse_users_views_default_views() {
     'numbertype_position' => 'before',
   );
   $handler->display->display_options['fields']['field_phones']['delta_offset'] = '0';
-  /* Sort criterion: Field: Last name (field_last_name) */
+  /* Sort criterion: Profile: Last name (field_last_name) */
   $handler->display->display_options['sorts']['field_last_name_value']['id'] = 'field_last_name_value';
   $handler->display->display_options['sorts']['field_last_name_value']['table'] = 'field_data_field_last_name';
   $handler->display->display_options['sorts']['field_last_name_value']['field'] = 'field_last_name_value';

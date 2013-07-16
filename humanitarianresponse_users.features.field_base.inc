@@ -72,12 +72,15 @@ function humanitarianresponse_users_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_key',
+    'field_permissions' => array(
+      'type' => 2,
+    ),
     'foreign keys' => array(
-      'node' => array(
+      'taxonomy_term_data' => array(
         'columns' => array(
-          'target_id' => 'nid',
+          'target_id' => 'tid',
         ),
-        'table' => 'node',
+        'table' => 'taxonomy_term_data',
       ),
     ),
     'indexes' => array(
@@ -109,6 +112,7 @@ function humanitarianresponse_users_field_default_field_bases() {
           'themes' => 'themes',
         ),
       ),
+      'profile2_private' => 0,
       'target_type' => 'taxonomy_term',
     ),
     'translatable' => 0,

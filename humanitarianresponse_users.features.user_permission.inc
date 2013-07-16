@@ -50,6 +50,16 @@ function humanitarianresponse_users_user_default_permissions() {
     'module' => 'follow',
   );
 
+  // Exported permission: edit field_key.
+  $permissions['edit field_key'] = array(
+    'name' => 'edit field_key',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'field_permissions',
+  );
+
   // Exported permission: edit site follow links.
   $permissions['edit site follow links'] = array(
     'name' => 'edit site follow links',
@@ -58,6 +68,16 @@ function humanitarianresponse_users_user_default_permissions() {
       'manager' => 'manager',
     ),
     'module' => 'follow',
+  );
+
+  // Exported permission: view field_key.
+  $permissions['view field_key'] = array(
+    'name' => 'view field_key',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'field_permissions',
   );
 
   return $permissions;
