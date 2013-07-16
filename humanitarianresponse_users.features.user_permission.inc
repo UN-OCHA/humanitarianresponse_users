@@ -50,6 +50,16 @@ function humanitarianresponse_users_user_default_permissions() {
     'module' => 'follow',
   );
 
+  // Exported permission: edit any main profile.
+  $permissions['edit any main profile'] = array(
+    'name' => 'edit any main profile',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'profile2',
+  );
+
   // Exported permission: edit field_key.
   $permissions['edit field_key'] = array(
     'name' => 'edit field_key',
@@ -58,6 +68,15 @@ function humanitarianresponse_users_user_default_permissions() {
       'manager' => 'manager',
     ),
     'module' => 'field_permissions',
+  );
+
+  // Exported permission: edit own main profile.
+  $permissions['edit own main profile'] = array(
+    'name' => 'edit own main profile',
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'profile2',
   );
 
   // Exported permission: edit site follow links.
@@ -70,6 +89,16 @@ function humanitarianresponse_users_user_default_permissions() {
     'module' => 'follow',
   );
 
+  // Exported permission: view any main profile.
+  $permissions['view any main profile'] = array(
+    'name' => 'view any main profile',
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'profile2',
+  );
+
   // Exported permission: view field_key.
   $permissions['view field_key'] = array(
     'name' => 'view field_key',
@@ -78,6 +107,15 @@ function humanitarianresponse_users_user_default_permissions() {
       'manager' => 'manager',
     ),
     'module' => 'field_permissions',
+  );
+
+  // Exported permission: view own main profile.
+  $permissions['view own main profile'] = array(
+    'name' => 'view own main profile',
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'profile2',
   );
 
   return $permissions;
