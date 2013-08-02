@@ -88,6 +88,7 @@ features[user_permission][] = administer follow
 features[user_permission][] = assign roles
 features[user_permission][] = cancel account
 features[user_permission][] = change follow link titles
+features[user_permission][] = administer profiles
 features[user_permission][] = edit any main profile
 features[user_permission][] = edit field_key
 features[user_permission][] = edit own main profile
