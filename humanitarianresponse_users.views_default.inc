@@ -39,6 +39,15 @@ function humanitarianresponse_users_views_default_views() {
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
   $handler->display->display_options['empty']['area']['content'] = 'There are no key contacts';
   $handler->display->display_options['empty']['area']['format'] = 'simple';
+  /* Field: Profile: URL */
+  $handler->display->display_options['fields']['url']['id'] = 'url';
+  $handler->display->display_options['fields']['url']['table'] = 'views_entity_profile2';
+  $handler->display->display_options['fields']['url']['field'] = 'url';
+  $handler->display->display_options['fields']['url']['label'] = '';
+  $handler->display->display_options['fields']['url']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['url']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['url']['display_as_link'] = FALSE;
+  $handler->display->display_options['fields']['url']['link_to_entity'] = 0;
   /* Field: Profile: First name */
   $handler->display->display_options['fields']['field_first_name']['id'] = 'field_first_name';
   $handler->display->display_options['fields']['field_first_name']['table'] = 'field_data_field_first_name';
@@ -53,6 +62,8 @@ function humanitarianresponse_users_views_default_views() {
   $handler->display->display_options['fields']['field_last_name']['label'] = '';
   $handler->display->display_options['fields']['field_last_name']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_last_name']['alter']['text'] = '[field_first_name] [field_last_name]';
+  $handler->display->display_options['fields']['field_last_name']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_last_name']['alter']['path'] = '[url]';
   $handler->display->display_options['fields']['field_last_name']['element_label_colon'] = FALSE;
   /* Field: Profile: Job Title */
   $handler->display->display_options['fields']['field_job_title']['id'] = 'field_job_title';

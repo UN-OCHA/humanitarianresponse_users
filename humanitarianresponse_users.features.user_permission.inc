@@ -20,6 +20,16 @@ function humanitarianresponse_users_user_default_permissions() {
     'module' => 'follow',
   );
 
+  // Exported permission: administer profiles.
+  $permissions['administer profiles'] = array(
+    'name' => 'administer profiles',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'profile2',
+  );
+
   // Exported permission: assign roles.
   $permissions['assign roles'] = array(
     'name' => 'assign roles',
@@ -48,16 +58,6 @@ function humanitarianresponse_users_user_default_permissions() {
       'manager' => 'manager',
     ),
     'module' => 'follow',
-  );
-  
-  // Exported permission: administer profiles.
-  $permissions['administer profiles'] = array(
-    'name' => 'administer profiles',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'manager' => 'manager',
-    ),
-    'module' => 'profile2',
   );
 
   // Exported permission: edit any main profile.
