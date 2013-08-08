@@ -596,7 +596,8 @@ function humanitarianresponse_users_field_default_field_instances() {
         'module' => 'phone',
         'settings' => array(
           'allow_alpha' => FALSE,
-          'as_tel_link' => FALSE,
+          'as_tel_link' => TRUE,
+          'raw' => FALSE,
           'components' => array(
             'extension' => 'extension',
             'numbertype' => 'numbertype',
@@ -614,7 +615,8 @@ function humanitarianresponse_users_field_default_field_instances() {
         'module' => 'phone',
         'settings' => array(
           'allow_alpha' => FALSE,
-          'as_tel_link' => FALSE,
+          'as_tel_link' => TRUE,
+          'raw' => FALSE,
           'components' => array(
             'extension' => 'extension',
             'numbertype' => 'numbertype',
