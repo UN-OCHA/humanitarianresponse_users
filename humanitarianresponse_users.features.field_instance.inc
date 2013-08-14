@@ -217,10 +217,15 @@ function humanitarianresponse_users_field_default_field_instances() {
         'weight' => 1,
       ),
       'search' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 12,
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'title_class' => '',
+          'title_link' => 'content',
+          'title_style' => '_none',
+        ),
+        'type' => 'title_linked',
+        'weight' => -1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -429,10 +434,15 @@ function humanitarianresponse_users_field_default_field_instances() {
         'weight' => 2,
       ),
       'search' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 13,
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'title_class' => '',
+          'title_link' => 'content',
+          'title_style' => '_none',
+        ),
+        'type' => 'title_linked',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -597,7 +607,6 @@ function humanitarianresponse_users_field_default_field_instances() {
         'settings' => array(
           'allow_alpha' => FALSE,
           'as_tel_link' => TRUE,
-          'raw' => FALSE,
           'components' => array(
             'extension' => 'extension',
             'numbertype' => 'numbertype',
@@ -606,6 +615,7 @@ function humanitarianresponse_users_field_default_field_instances() {
           'extension_prefix' => ' ext. ',
           'full_hcard' => FALSE,
           'numbertype_position' => 'before',
+          'raw' => FALSE,
         ),
         'type' => 'phone_international',
         'weight' => 3,
@@ -616,7 +626,6 @@ function humanitarianresponse_users_field_default_field_instances() {
         'settings' => array(
           'allow_alpha' => FALSE,
           'as_tel_link' => TRUE,
-          'raw' => FALSE,
           'components' => array(
             'extension' => 'extension',
             'numbertype' => 'numbertype',
@@ -625,6 +634,7 @@ function humanitarianresponse_users_field_default_field_instances() {
           'extension_prefix' => ' ext. ',
           'full_hcard' => FALSE,
           'numbertype_position' => 'before',
+          'raw' => FALSE,
         ),
         'type' => 'phone_international',
         'weight' => 2,
@@ -643,6 +653,7 @@ function humanitarianresponse_users_field_default_field_instances() {
           'extension_prefix' => ' ext. ',
           'full_hcard' => FALSE,
           'numbertype_position' => 'before',
+          'raw' => FALSE,
         ),
         'type' => 'phone_international',
         'weight' => 4,

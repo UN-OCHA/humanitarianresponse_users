@@ -43,6 +43,7 @@ dependencies[] = roleassign
 dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = text
+dependencies[] = title
 dependencies[] = user
 dependencies[] = views
 features[context][] = sitewide_users
