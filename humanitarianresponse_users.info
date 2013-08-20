@@ -8,6 +8,7 @@ dependencies[] = auto_entitylabel
 dependencies[] = chosen
 dependencies[] = context
 dependencies[] = ctools
+dependencies[] = ds
 dependencies[] = email
 dependencies[] = entity
 dependencies[] = entity_token
