@@ -224,7 +224,7 @@ function humanitarianresponse_users_field_default_field_bases() {
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_users',
+    'field_name' => 'field_profiles',
     'field_permissions' => array(
       'type' => 0,
     ),
