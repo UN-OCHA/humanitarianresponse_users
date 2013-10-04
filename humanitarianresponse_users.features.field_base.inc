@@ -229,11 +229,11 @@ function humanitarianresponse_users_field_default_field_bases() {
       'type' => 0,
     ),
     'foreign keys' => array(
-      'users' => array(
+      'profile' => array(
         'columns' => array(
-          'target_id' => 'uid',
+          'target_id' => 'pid',
         ),
-        'table' => 'users',
+        'table' => 'profile',
       ),
     ),
     'indexes' => array(
@@ -255,8 +255,10 @@ function humanitarianresponse_users_field_default_field_bases() {
         'sort' => array(
           'type' => 'none',
         ),
+        'target_bundles' => array(),
       ),
-      'target_type' => 'user',
+      'profile2_private' => FALSE,
+      'target_type' => 'profile2',
     ),
     'translatable' => 0,
     'type' => 'entityreference',
