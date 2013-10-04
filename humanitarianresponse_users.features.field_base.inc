@@ -218,8 +218,8 @@ function humanitarianresponse_users_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_users'
-  $field_bases['field_users'] = array(
+  // Exported field_base: 'field_profiles'
+  $field_bases['field_profiles'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
