@@ -689,7 +689,7 @@ function humanitarianresponse_users_field_default_field_instances() {
     ),
     'entity_type' => 'profile2',
     'field_name' => 'field_locations',
-    'label' => 'Location you work in',
+    'label' => 'Location',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
