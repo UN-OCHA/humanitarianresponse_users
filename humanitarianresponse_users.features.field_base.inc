@@ -32,6 +32,28 @@ function humanitarianresponse_users_field_default_field_bases() {
     'type' => 'email',
   );
 
+  // Exported field_base: 'field_emails_other'
+  $field_bases['field_emails_other'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_emails_other',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'foreign keys' => array(),
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'email',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'profile2_private' => 0,
+    ),
+    'translatable' => 0,
+    'type' => 'email',
+  );
+
   // Exported field_base: 'field_first_name'
   $field_bases['field_first_name'] = array(
     'active' => 1,
@@ -152,6 +174,30 @@ function humanitarianresponse_users_field_default_field_bases() {
     'type' => 'text',
   );
 
+  // Exported field_base: 'field_other_contact_info'
+  $field_bases['field_other_contact_info'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_other_contact_info',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'foreign keys' => array(),
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'field_collection',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'hide_blank_items' => 1,
+      'path' => '',
+      'profile2_private' => 0,
+    ),
+    'translatable' => 0,
+    'type' => 'field_collection',
+  );
+
   // Exported field_base: 'field_phones'
   $field_bases['field_phones'] = array(
     'active' => 1,
@@ -187,6 +233,28 @@ function humanitarianresponse_users_field_default_field_bases() {
     'type' => 'phone',
   );
 
+  // Exported field_base: 'field_profile_privacy'
+  $field_bases['field_profile_privacy'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_profile_privacy',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'foreign keys' => array(),
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'profile2_privacy',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'profile2_private' => 0,
+    ),
+    'translatable' => 0,
+    'type' => 'profile2_privacy',
+  );
+
   // Exported field_base: 'field_salutation'
   $field_bases['field_salutation'] = array(
     'active' => 1,
@@ -218,50 +286,72 @@ function humanitarianresponse_users_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_profiles'
-  $field_bases['field_profiles'] = array(
+  // Exported field_base: 'field_social_id'
+  $field_bases['field_social_id'] = array(
     'active' => 1,
-    'cardinality' => -1,
+    'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_profiles',
+    'field_name' => 'field_social_id',
     'field_permissions' => array(
       'type' => 0,
     ),
     'foreign keys' => array(
-      'profile' => array(
+      'format' => array(
         'columns' => array(
-          'target_id' => 'pid',
+          'format' => 'format',
         ),
-        'table' => 'profile',
+        'table' => 'filter_format',
       ),
     ),
     'indexes' => array(
-      'target_id' => array(
-        0 => 'target_id',
+      'format' => array(
+        0 => 'format',
       ),
     ),
     'locked' => 0,
-    'module' => 'entityreference',
+    'module' => 'text',
     'settings' => array(
       'entity_translation_sync' => FALSE,
-      'handler' => 'base',
-      'handler_settings' => array(
-        'behaviors' => array(
-          'views-select-list' => array(
-            'status' => 0,
-          ),
-        ),
-        'sort' => array(
-          'type' => 'none',
-        ),
-        'target_bundles' => array(),
-      ),
+      'max_length' => 255,
       'profile2_private' => FALSE,
-      'target_type' => 'profile2',
     ),
     'translatable' => 0,
-    'type' => 'entityreference',
+    'type' => 'text',
+  );
+
+  // Exported field_base: 'field_social_network'
+  $field_bases['field_social_network'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_social_network',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'foreign keys' => array(),
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'skype' => 'Skype',
+        'hangout' => 'Google Hangout',
+        'yahoo' => 'Yahoo Messenger',
+        'facebook' => 'Facebook',
+        'linkedin' => 'LinkedIn',
+      ),
+      'allowed_values_function' => '',
+      'entity_translation_sync' => FALSE,
+      'profile2_private' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
   );
 
   return $field_bases;
