@@ -1161,7 +1161,7 @@ function humanitarianresponse_users_field_default_field_instances() {
         'label' => 'above',
         'module' => 'profile2_privacy',
         'settings' => array(),
-        'type' => 'profile2_privacy_formatter',
+        'type' => 'list_default',
         'weight' => 16,
       ),
       'search' => array(
@@ -1181,9 +1181,11 @@ function humanitarianresponse_users_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 0,
-      'module' => 'profile2_privacy',
-      'settings' => array(),
-      'type' => 'profile2_privacy_widget',
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => 0,
+      ),
+      'type' => 'options_select',
       'weight' => 0,
     ),
   );
