@@ -5,6 +5,35 @@
  */
 
 /**
+ * Implements hook_ds_field_settings_info().
+ */
+function humanitarianresponse_users_ds_field_settings_info() {
+  $export = array();
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'profile2|main|default';
+  $ds_fieldsetting->entity_type = 'profile2';
+  $ds_fieldsetting->bundle = 'main';
+  $ds_fieldsetting->view_mode = 'default';
+  $ds_fieldsetting->settings = array(
+    'profile2_created' => array(
+      'weight' => '17',
+      'label' => 'inline',
+      'format' => 'default',
+    ),
+    'profile2_user' => array(
+      'weight' => '18',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
+  );
+  $export['profile2|main|default'] = $ds_fieldsetting;
+
+  return $export;
+}
+
+/**
  * Implements hook_ds_custom_fields_info().
  */
 function humanitarianresponse_users_ds_custom_fields_info() {
