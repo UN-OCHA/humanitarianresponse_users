@@ -91,7 +91,9 @@ function humanitarianresponse_users_strongarm() {
   $strongarm->name = 'roleassign_roles';
   $strongarm->value = array(
     218860149 => '218860149',
+    188284353 => '188284353',
     200153887 => '200153887',
+    197637936 => '197637936',
     52310416 => '52310416',
     30037204 => 0,
   );
