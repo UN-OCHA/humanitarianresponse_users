@@ -61,6 +61,72 @@ function humanitarianresponse_users_user_default_permissions() {
     'module' => 'follow',
   );
 
+  // Exported permission: 'create field_froles'.
+  $permissions['create field_froles'] = array(
+    'name' => 'create field_froles',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'create field_functional_role'.
+  $permissions['create field_functional_role'] = array(
+    'name' => 'create field_functional_role',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'create field_functional_role_of'.
+  $permissions['create field_functional_role_of'] = array(
+    'name' => 'create field_functional_role_of',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'create field_key'.
+  $permissions['create field_key'] = array(
+    'name' => 'create field_key',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'create field_key_collection'.
+  $permissions['create field_key_collection'] = array(
+    'name' => 'create field_key_collection',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'create field_key_weight'.
+  $permissions['create field_key_weight'] = array(
+    'name' => 'create field_key_weight',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'field_permissions',
+  );
+
   // Exported permission: 'edit any main profile'.
   $permissions['edit any main profile'] = array(
     'name' => 'edit any main profile',
@@ -72,9 +138,130 @@ function humanitarianresponse_users_user_default_permissions() {
     'module' => 'profile2',
   );
 
+  // Exported permission: 'edit field_froles'.
+  $permissions['edit field_froles'] = array(
+    'name' => 'edit field_froles',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'edit field_functional_role'.
+  $permissions['edit field_functional_role'] = array(
+    'name' => 'edit field_functional_role',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'edit field_functional_role_of'.
+  $permissions['edit field_functional_role_of'] = array(
+    'name' => 'edit field_functional_role_of',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'field_permissions',
+  );
+
   // Exported permission: 'edit field_key'.
   $permissions['edit field_key'] = array(
     'name' => 'edit field_key',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'edit field_key_collection'.
+  $permissions['edit field_key_collection'] = array(
+    'name' => 'edit field_key_collection',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'edit field_key_weight'.
+  $permissions['edit field_key_weight'] = array(
+    'name' => 'edit field_key_weight',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'edit own field_froles'.
+  $permissions['edit own field_froles'] = array(
+    'name' => 'edit own field_froles',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'edit own field_functional_role'.
+  $permissions['edit own field_functional_role'] = array(
+    'name' => 'edit own field_functional_role',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'edit own field_functional_role_of'.
+  $permissions['edit own field_functional_role_of'] = array(
+    'name' => 'edit own field_functional_role_of',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'edit own field_key'.
+  $permissions['edit own field_key'] = array(
+    'name' => 'edit own field_key',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'edit own field_key_collection'.
+  $permissions['edit own field_key_collection'] = array(
+    'name' => 'edit own field_key_collection',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'edit own field_key_weight'.
+  $permissions['edit own field_key_weight'] = array(
+    'name' => 'edit own field_key_weight',
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
@@ -112,9 +299,134 @@ function humanitarianresponse_users_user_default_permissions() {
     'module' => 'profile2',
   );
 
+  // Exported permission: 'view field_froles'.
+  $permissions['view field_froles'] = array(
+    'name' => 'view field_froles',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'view field_functional_role'.
+  $permissions['view field_functional_role'] = array(
+    'name' => 'view field_functional_role',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'view field_functional_role_of'.
+  $permissions['view field_functional_role_of'] = array(
+    'name' => 'view field_functional_role_of',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'field_permissions',
+  );
+
   // Exported permission: 'view field_key'.
   $permissions['view field_key'] = array(
     'name' => 'view field_key',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'view field_key_collection'.
+  $permissions['view field_key_collection'] = array(
+    'name' => 'view field_key_collection',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'view field_key_weight'.
+  $permissions['view field_key_weight'] = array(
+    'name' => 'view field_key_weight',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'view own field_froles'.
+  $permissions['view own field_froles'] = array(
+    'name' => 'view own field_froles',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'view own field_functional_role'.
+  $permissions['view own field_functional_role'] = array(
+    'name' => 'view own field_functional_role',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'view own field_functional_role_of'.
+  $permissions['view own field_functional_role_of'] = array(
+    'name' => 'view own field_functional_role_of',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'view own field_key'.
+  $permissions['view own field_key'] = array(
+    'name' => 'view own field_key',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'view own field_key_collection'.
+  $permissions['view own field_key_collection'] = array(
+    'name' => 'view own field_key_collection',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: 'view own field_key_weight'.
+  $permissions['view own field_key_weight'] = array(
+    'name' => 'view own field_key_weight',
     'roles' => array(
       'administrator' => 'administrator',
       'editor' => 'editor',
