@@ -25,6 +25,7 @@ function humanitarianresponse_users_user_default_permissions() {
     'name' => 'administer profiles',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'profile2',
@@ -65,6 +66,7 @@ function humanitarianresponse_users_user_default_permissions() {
     'name' => 'edit any main profile',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'profile2',
@@ -75,6 +77,7 @@ function humanitarianresponse_users_user_default_permissions() {
     'name' => 'edit field_key',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'field_permissions',
@@ -114,6 +117,7 @@ function humanitarianresponse_users_user_default_permissions() {
     'name' => 'view field_key',
     'roles' => array(
       'administrator' => 'administrator',
+      'editor' => 'editor',
       'manager' => 'manager',
     ),
     'module' => 'field_permissions',

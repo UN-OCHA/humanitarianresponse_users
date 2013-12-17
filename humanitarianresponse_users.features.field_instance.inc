@@ -10,89 +10,24 @@
 function humanitarianresponse_users_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'field_collection_item-field_other_contact_info-field_social_id'
-  $field_instances['field_collection_item-field_other_contact_info-field_social_id'] = array(
-    'bundle' => 'field_other_contact_info',
+  // Exported field_instance: 'field_collection_item-field_froles-field_functional_role'
+  $field_instances['field_collection_item-field_froles-field_functional_role'] = array(
+    'bundle' => 'field_froles',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
+        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 1,
-      ),
-    ),
-    'entity_type' => 'field_collection_item',
-    'field_name' => 'field_social_id',
-    'label' => 'ID or URL',
-    'required' => 0,
-    'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'php_code' => 'php_code',
-          'plain_text' => 'plain_text',
-          'simple' => 'simple',
-        ),
-        'allowed_formats_toggle' => 0,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'filtered_html' => array(
-              'weight' => 0,
-            ),
-            'full_html' => array(
-              'weight' => 0,
-            ),
-            'php_code' => array(
-              'weight' => 11,
-            ),
-            'plain_text' => array(
-              'weight' => 10,
-            ),
-            'simple' => array(
-              'weight' => 0,
-            ),
-          ),
-        ),
-      ),
-      'entity_translation_sync' => FALSE,
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 2,
-    ),
-  );
-
-  // Exported field_instance: 'field_collection_item-field_other_contact_info-field_social_network'
-  $field_instances['field_collection_item-field_other_contact_info-field_social_network'] = array(
-    'bundle' => 'field_other_contact_info',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
+        'type' => 'taxonomy_term_reference_link',
         'weight' => 0,
       ),
     ),
     'entity_type' => 'field_collection_item',
-    'field_name' => 'field_social_network',
-    'label' => 'Social network',
+    'field_name' => 'field_functional_role',
+    'label' => 'Functional Role',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -102,10 +37,127 @@ function humanitarianresponse_users_field_default_field_instances() {
       'active' => 1,
       'module' => 'options',
       'settings' => array(
-        'apply_chosen' => 0,
+        'apply_chosen' => 1,
       ),
       'type' => 'options_select',
       'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'field_collection_item-field_froles-field_functional_role_of'
+  $field_instances['field_collection_item-field_froles-field_functional_role_of'] = array(
+    'bundle' => 'field_froles',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_functional_role_of',
+    'label' => 'Of',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'field_collection_item-field_key_collection-field_key'
+  $field_instances['field_collection_item-field_key_collection-field_key'] = array(
+    'bundle' => 'field_key_collection',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_key',
+    'label' => 'Key on these pages',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'field_collection_item-field_key_collection-field_key_weight'
+  $field_instances['field_collection_item-field_key_collection-field_key_weight'] = array(
+    'bundle' => 'field_key_collection',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 0,
+          'thousand_separator' => ' ',
+        ),
+        'type' => 'number_integer',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_key_weight',
+    'label' => 'Weight',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 3,
     ),
   );
 
@@ -124,7 +176,7 @@ function humanitarianresponse_users_field_default_field_instances() {
           'taxonomy_term_separator' => ', ',
         ),
         'type' => 'ds_taxonomy_separator',
-        'weight' => 7,
+        'weight' => 8,
       ),
       'search' => array(
         'label' => 'inline',
@@ -156,10 +208,10 @@ function humanitarianresponse_users_field_default_field_instances() {
       'active' => 1,
       'module' => 'options',
       'settings' => array(
-        'apply_chosen' => 1,
+        'apply_chosen' => 0,
       ),
       'type' => 'options_select',
-      'weight' => 10,
+      'weight' => 5,
     ),
   );
 
@@ -178,7 +230,7 @@ function humanitarianresponse_users_field_default_field_instances() {
           'taxonomy_term_separator' => ', ',
         ),
         'type' => 'ds_taxonomy_separator',
-        'weight' => 9,
+        'weight' => 10,
       ),
       'search' => array(
         'label' => 'above',
@@ -207,7 +259,7 @@ function humanitarianresponse_users_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 12,
+      'weight' => 10,
     ),
   );
 
@@ -261,47 +313,7 @@ function humanitarianresponse_users_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'email_textfield',
-      'weight' => 1,
-    ),
-  );
-
-  // Exported field_instance: 'profile2-main-field_emails_other'
-  $field_instances['profile2-main-field_emails_other'] = array(
-    'bundle' => 'main',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'email',
-        'settings' => array(),
-        'type' => 'email_default',
-        'weight' => 17,
-      ),
-      'search' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'profile2',
-    'field_name' => 'field_emails_other',
-    'label' => 'Other Emails',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'email',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'email_textfield',
-      'weight' => 2,
+      'weight' => 0,
     ),
   );
 
@@ -320,7 +332,7 @@ function humanitarianresponse_users_field_default_field_instances() {
           'taxonomy_term_separator' => ', ',
         ),
         'type' => 'ds_taxonomy_separator',
-        'weight' => 12,
+        'weight' => 13,
       ),
       'search' => array(
         'label' => 'above',
@@ -349,7 +361,7 @@ function humanitarianresponse_users_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 15,
+      'weight' => 13,
     ),
   );
 
@@ -428,7 +440,51 @@ function humanitarianresponse_users_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 4,
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'profile2-main-field_froles'
+  $field_instances['profile2-main-field_froles'] = array(
+    'bundle' => 'main',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'field_collection',
+        'settings' => array(
+          'add' => 'Add',
+          'delete' => 'Delete',
+          'description' => TRUE,
+          'edit' => 'Edit',
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_view',
+        'weight' => 18,
+      ),
+      'search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'field_name' => 'field_froles',
+    'label' => 'Functional Roles',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
+      'weight' => 17,
     ),
   );
 
@@ -447,7 +503,7 @@ function humanitarianresponse_users_field_default_field_instances() {
           'taxonomy_term_separator' => ', ',
         ),
         'type' => 'ds_taxonomy_separator',
-        'weight' => 11,
+        'weight' => 12,
       ),
       'search' => array(
         'label' => 'above',
@@ -476,7 +532,7 @@ function humanitarianresponse_users_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 14,
+      'weight' => 12,
     ),
   );
 
@@ -492,7 +548,7 @@ function humanitarianresponse_users_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_plain',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'search' => array(
         'label' => 'inline',
@@ -525,25 +581,29 @@ function humanitarianresponse_users_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 9,
+      'weight' => 8,
     ),
   );
 
-  // Exported field_instance: 'profile2-main-field_key'
-  $field_instances['profile2-main-field_key'] = array(
+  // Exported field_instance: 'profile2-main-field_key_collection'
+  $field_instances['profile2-main-field_key_collection'] = array(
     'bundle' => 'main',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
-        'module' => 'entityreference',
+        'label' => 'above',
+        'module' => 'field_collection',
         'settings' => array(
-          'link' => FALSE,
+          'add' => 'Add',
+          'delete' => 'Delete',
+          'description' => TRUE,
+          'edit' => 'Edit',
+          'view_mode' => 'full',
         ),
-        'type' => 'entityreference_label',
-        'weight' => 13,
+        'type' => 'field_collection_view',
+        'weight' => 17,
       ),
       'search' => array(
         'label' => 'above',
@@ -553,7 +613,7 @@ function humanitarianresponse_users_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'profile2',
-    'field_name' => 'field_key',
+    'field_name' => 'field_key_collection',
     'label' => 'Key on these pages',
     'required' => 0,
     'settings' => array(
@@ -561,15 +621,11 @@ function humanitarianresponse_users_field_default_field_instances() {
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 1,
-      'module' => 'entityreference',
-      'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'size' => 60,
-      ),
-      'type' => 'entityreference_autocomplete',
-      'weight' => 17,
+      'active' => 0,
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
+      'weight' => 16,
     ),
   );
 
@@ -648,7 +704,7 @@ function humanitarianresponse_users_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 5,
+      'weight' => 3,
     ),
   );
 
@@ -657,7 +713,7 @@ function humanitarianresponse_users_field_default_field_instances() {
     'bundle' => 'main',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Your current location',
     'display' => array(
       'default' => array(
         'label' => 'inline',
@@ -667,7 +723,7 @@ function humanitarianresponse_users_field_default_field_instances() {
           'taxonomy_term_separator' => ', ',
         ),
         'type' => 'ds_taxonomy_separator',
-        'weight' => 8,
+        'weight' => 9,
       ),
       'search' => array(
         'label' => 'inline',
@@ -697,12 +753,81 @@ function humanitarianresponse_users_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => 1,
+      'module' => 'hs_taxonomy',
+      'settings' => array(),
+      'type' => 'taxonomy_hs',
+      'weight' => 9,
+    ),
+  );
+
+  // Exported field_instance: 'profile2-main-field_oganization_other'
+  $field_instances['profile2-main-field_oganization_other'] = array(
+    'bundle' => 'main',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'If you selected "Other" in the organizations list, please enter your organization name here',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 6,
       ),
-      'type' => 'options_select',
-      'weight' => 11,
+      'search' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'profile2',
+    'field_name' => 'field_oganization_other',
+    'label' => 'Organization name',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'php_code' => 'php_code',
+          'plain_text' => 'plain_text',
+          'simple' => 'simple',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 0,
+            ),
+            'php_code' => array(
+              'weight' => 11,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+            'simple' => array(
+              'weight' => 0,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 7,
     ),
   );
 
@@ -756,51 +881,7 @@ function humanitarianresponse_users_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 8,
-    ),
-  );
-
-  // Exported field_instance: 'profile2-main-field_other_contact_info'
-  $field_instances['profile2-main-field_other_contact_info'] = array(
-    'bundle' => 'main',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'field_collection',
-        'settings' => array(
-          'add' => 'Add',
-          'delete' => 'Delete',
-          'description' => TRUE,
-          'edit' => 'Edit',
-          'view_mode' => 'full',
-        ),
-        'type' => 'field_collection_view',
-        'weight' => 18,
-      ),
-      'search' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'profile2',
-    'field_name' => 'field_other_contact_info',
-    'label' => 'Other contact information',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'field_collection',
-      'settings' => array(),
-      'type' => 'field_collection_embed',
-      'weight' => 7,
+      'weight' => 6,
     ),
   );
 
@@ -1144,49 +1225,7 @@ function humanitarianresponse_users_field_default_field_instances() {
         'use_tel_input' => 1,
       ),
       'type' => 'phone',
-      'weight' => 6,
-    ),
-  );
-
-  // Exported field_instance: 'profile2-main-field_profile_privacy'
-  $field_instances['profile2-main-field_profile_privacy'] = array(
-    'bundle' => 'main',
-    'default_value' => array(
-      0 => 1,
-    ),
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'profile2_privacy',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 16,
-      ),
-      'search' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'profile2',
-    'field_name' => 'field_profile_privacy',
-    'label' => 'Select which fields you would like to hide from the public',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => 0,
-      ),
-      'type' => 'options_select',
-      'weight' => 0,
+      'weight' => 4,
     ),
   );
 
@@ -1233,7 +1272,7 @@ function humanitarianresponse_users_field_default_field_instances() {
         'apply_chosen' => 0,
       ),
       'type' => 'options_select',
-      'weight' => 3,
+      'weight' => 1,
     ),
   );
 
@@ -1252,7 +1291,7 @@ function humanitarianresponse_users_field_default_field_instances() {
           'taxonomy_term_separator' => ', ',
         ),
         'type' => 'ds_taxonomy_separator',
-        'weight' => 10,
+        'weight' => 11,
       ),
       'search' => array(
         'label' => 'above',
@@ -1283,7 +1322,7 @@ function humanitarianresponse_users_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 13,
+      'weight' => 11,
     ),
   );
 
@@ -1294,20 +1333,22 @@ function humanitarianresponse_users_field_default_field_instances() {
   t('Email');
   t('Emergencies');
   t('First name');
+  t('Functional Role');
+  t('Functional Roles');
   t('Funding');
-  t('ID or URL');
+  t('If you selected "Other" in the organizations list, please enter your organization name here');
   t('Job Title');
   t('Key on these pages');
   t('Last name');
-  t('Location you work in');
+  t('Location');
+  t('Of');
   t('Organization');
-  t('Other Emails');
-  t('Other contact information');
+  t('Organization name');
   t('Salutation');
-  t('Select which fields you would like to hide from the public');
-  t('Social network');
   t('Telephone(s)');
   t('Theme(s)');
+  t('Weight');
+  t('Your current location');
 
   return $field_instances;
 }

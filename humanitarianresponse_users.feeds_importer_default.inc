@@ -115,6 +115,11 @@ function humanitarianresponse_users_feeds_importer_default() {
             'target' => 'guid',
             'unique' => 1,
           ),
+          14 => array(
+            'source' => 'Functional Roles',
+            'target' => 'field_froles:field_functional_role',
+            'unique' => FALSE,
+          ),
         ),
         'update_existing' => '2',
         'input_format' => 'plain_text',

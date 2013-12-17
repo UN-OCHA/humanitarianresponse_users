@@ -11,6 +11,9 @@ function humanitarianresponse_users_ctools_plugin_api($module = NULL, $api = NUL
   if ($module == "context" && $api == "context") {
     return array("version" => "3");
   }
+  if ($module == "ds" && $api == "ds") {
+    return array("version" => "1");
+  }
   if ($module == "feeds" && $api == "feeds_importer_default") {
     return array("version" => "1");
   }
