@@ -6,6 +6,13 @@
 include_once('humanitarianresponse_users.features.inc');
 
 /**
+ * Implements hook_cron()
+ */
+function humanitarianresponse_users_cron() {
+  humanitarianresponse_core_feeds_check('csv_functional_roles', 'http://terms.humanitarianresponse.info/functional-roles.csv');
+}
+
+/**
  * Implements hook_block_info()
  */
 function humanitarianresponse_users_block_info() {
