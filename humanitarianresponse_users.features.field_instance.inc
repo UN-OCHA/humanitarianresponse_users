@@ -1494,6 +1494,43 @@ function humanitarianresponse_users_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'taxonomy_term-functional_role-name_field'
+  $field_instances['taxonomy_term-functional_role-name_field'] = array(
+    'bundle' => 'functional_role',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'name_field',
+    'label' => 'Name',
+    'required' => TRUE,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'hide_label' => array(
+        'entity' => FALSE,
+        'page' => FALSE,
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => -5,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Clusters');
@@ -1510,6 +1547,7 @@ function humanitarianresponse_users_field_default_field_instances() {
   t('Key on these pages');
   t('Last name');
   t('Location');
+  t('Name');
   t('Of');
   t('Organization');
   t('Organization name');
