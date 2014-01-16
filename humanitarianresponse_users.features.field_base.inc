@@ -160,7 +160,14 @@ function humanitarianresponse_users_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 2,
     ),
-    'foreign keys' => array(),
+    'foreign keys' => array(
+      'taxonomy_term_data' => array(
+        'columns' => array(
+          'target_id' => 'tid',
+        ),
+        'table' => 'taxonomy_term_data',
+      ),
+    ),
     'indexes' => array(
       'target_id' => array(
         0 => 'target_id',
@@ -206,7 +213,14 @@ function humanitarianresponse_users_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 2,
     ),
-    'foreign keys' => array(),
+    'foreign keys' => array(
+      'taxonomy_term_data' => array(
+        'columns' => array(
+          'target_id' => 'tid',
+        ),
+        'table' => 'taxonomy_term_data',
+      ),
+    ),
     'indexes' => array(
       'target_id' => array(
         0 => 'target_id',
@@ -415,6 +429,30 @@ function humanitarianresponse_users_field_default_field_bases() {
     'type' => 'phone',
   );
 
+  // Exported field_base: 'field_profile_privacy'
+  $field_bases['field_profile_privacy'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_profile_privacy',
+    'field_permissions' => array(
+      'type' => 1,
+    ),
+    'foreign keys' => array(),
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'profile2_privacy',
+    'settings' => array(
+      'allowed_values' => array(),
+      'allowed_values_function' => '',
+      'entity_translation_sync' => FALSE,
+      'profile2_private' => 0,
+    ),
+    'translatable' => 0,
+    'type' => 'profile2_privacy',
+  );
+
   // Exported field_base: 'field_profiles'
   $field_bases['field_profiles'] = array(
     'active' => 1,
@@ -425,7 +463,14 @@ function humanitarianresponse_users_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(),
+    'foreign keys' => array(
+      'profile' => array(
+        'columns' => array(
+          'target_id' => 'pid',
+        ),
+        'table' => 'profile',
+      ),
+    ),
     'indexes' => array(
       'target_id' => array(
         0 => 'target_id',

@@ -20,6 +20,9 @@ function humanitarianresponse_users_ctools_plugin_api($module = NULL, $api = NUL
   if ($module == "feeds_tamper" && $api == "feeds_tamper_default") {
     return array("version" => "2");
   }
+  if ($module == "profile2_privacy" && $api == "profile2_privacy") {
+    return array("version" => "1");
+  }
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
